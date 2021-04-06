@@ -8,8 +8,4 @@ module "ec2_vm" {
   instances_type = each.value.vm_type
   instances_count = each.value.vm_count
 
-  
-
- 
-
 }

@@ -13,6 +13,10 @@ data "aws_ami" "amazon_linux" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
+
+  tags = {
+    Name = "linux-ami"
+  }
 }
 
 data "aws_ami" "latest_ubuntu" {
@@ -28,16 +32,28 @@ owners = ["099720109477"]
       name   = "virtualization-type"
       values = ["hvm"]
   }
+
+  tags = {
+    Name = "ubuntu-ami"
+  }
 }
 
 resource "aws_instance" "linux_vm" {
   count = var.instances_count
   ami = data.aws_ami.amazon_linux.id
   instance_type = var.instances_type
+
+  tags = {
+    Name = "linux-ec2"
+  }
 }
 
 resource "aws_instance" "ubuntu_vm" {
   count = var.instances_count  
   ami = data.aws_ami.latest_ubuntu.id
   instance_type = var.instances_type
+
+  tags = {
+    Name = "ubuntu-ec2"
+  }
 }

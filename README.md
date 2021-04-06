@@ -14,7 +14,7 @@ Create and deploy multiple different type of AWS EC2-AMIs with __Terraform__
 ![Terraform](https://img.shields.io/badge/-Terraform-000000?style=flat&logo=Terraform)
 
 # AWS AWS_TGW_VPC's architecture diagram 
-![alt text](https://github.com/ValAug/AWS_TGW_VPC-s/blob/main/diagram.png)
+![alt text](https://github.com/ValAug/aws-compu-terraform/blob/main/ec2_d.png)
 
 
 # Purpose

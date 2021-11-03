@@ -54,6 +54,6 @@ resource "aws_instance" "ubuntu_vm" {
   instance_type = var.instances_type
 
   tags = {
-    Name = "ubuntu-ec2"
+    Name = "my-ubuntu-ec2"
   }
 }
